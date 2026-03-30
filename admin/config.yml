@@ -1,0 +1,72 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  # ─── HOMEPAGE ────────────────────────────────────────────────────────────────
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - name: "homepage"
+        label: "Homepage Content"
+        file: "_data/homepage.json"
+        fields:
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string" }
+          - { label: "Hero Subtext", name: "hero_subtext", widget: "text" }
+
+  # ─── G.E.E.K. RADIO 305 ─────────────────────────────────────────────────────
+  - name: "geek-radio"
+    label: "G.E.E.K. Radio 305"
+    files:
+      - name: "geek-radio"
+        label: "G.E.E.K. Radio Page"
+        file: "_data/geek-radio.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "G.E.E.K. Radio 305" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "Gifted Educated Empowered Kings & Queens" }
+          - { label: "About", name: "about", widget: "markdown" }
+          - label: "Shows"
+            name: "shows"
+            widget: "list"
+            fields:
+              - { label: "Show Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  # ─── KGTV ────────────────────────────────────────────────────────────────────
+  - name: "kgtv"
+    label: "KINGGODFREYTV"
+    files:
+      - name: "kgtv"
+        label: "KGTV Page"
+        file: "_data/kgtv.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "KINGGODFREYTV" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "Original Video. Unfiltered Vision." }
+          - { label: "About", name: "about", widget: "markdown" }
+          - label: "Shows"
+            name: "shows"
+            widget: "list"
+            fields:
+              - { label: "Show Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  # ─── FRESH AS FUNK ───────────────────────────────────────────────────────────
+  - name: "fresh-as-funk"
+    label: "Fresh As Funk"
+    files:
+      - name: "fresh-as-funk"
+        label: "Fresh As Funk Page"
+        file: "_data/fresh-as-funk.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "Fresh As Funk" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "The Culture. The Sound. The Lifestyle." }
+          - { label: "About", name: "about", widget: "markdown" }
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label: "Feature Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
