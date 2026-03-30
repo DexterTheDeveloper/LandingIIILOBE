@@ -1,6 +1,21 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: DexterTheDeveloper/LandingIIILOBE
   branch: main
+  base_url: https://oauth.godfreyconnection.workers.dev
+```
+
+So you're replacing:
+```
+name: git-gateway
+branch: main
+```
+with:
+```
+name: github
+repo: DexterTheDeveloper/LandingIIILOBE
+branch: main
+base_url: https://oauth.godfreyconnection.workers.dev
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
