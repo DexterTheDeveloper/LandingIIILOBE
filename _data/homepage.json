@@ -1,4 +1,15 @@
 {
-  "hero_tagline": "TEST",
-  "hero_subtext": "assets/uploads/iiiglobe-copy.png"
+  "tagline": "Imagine. Invent. Inspire.",
+  "social": {
+    "facebook": "https://facebook.com",
+    "instagram": "https://instagram.com",
+    "twitter": "https://x.com",
+    "youtube": "https://youtube.com"
+  },
+  "brands": [
+    {"label": "G.E.E.K. Radio 305", "url": "geek-radio.html"},
+    {"label": "KGTV", "url": "kgtv.html"},
+    {"label": "Fresh As Funk", "url": "fresh-as-funk.html"}
+  ],
+  "particle_count": 180
 }
