@@ -2,7 +2,8 @@ backend:
   name: github
   repo: DexterTheDeveloper/LandingIIILOBE
   branch: main
-  base_url: https://oauth.godfreyconnection.workers.dev
+  base_url: https://iiiglobe-oauth.godfreyconnection.workers.dev
+  auth_endpoint: /auth
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
