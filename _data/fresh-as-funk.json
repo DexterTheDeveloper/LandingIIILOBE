@@ -1,0 +1,15 @@
+{
+  "title": "Fresh As Funk",
+  "tagline": "The Culture. The Sound. The Lifestyle.",
+  "cta_text": "EXPLORE",
+  "cta_url": "#explore",
+  "about_title": "THE MOVEMENT",
+  "about_body": "Fresh As Funk is the cultural lifestyle brand within the IIIGLOBE ecosystem — rooted in music, fashion, street culture, and the creative underground. It's not a trend. It's a frequency.\n\nSpanning apparel, editorial content, and curated experiences, Fresh As Funk bridges the gap between artistry and architecture — between the record crate and the boardroom.",
+  "section2_title": "WHAT WE DO",
+  "items": [
+    {"name": "The Crate", "description": "Curated music selections, vinyl culture features, and deep cuts from across genres and eras."},
+    {"name": "Street Editorial", "description": "Fashion, culture photography, and editorial content documenting the creative landscape."},
+    {"name": "Drop Culture", "description": "Limited releases, collaborations, and brand partnerships born from authentic creative energy."}
+  ],
+  "particle_count": 280
+}
