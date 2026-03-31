@@ -1,0 +1,15 @@
+{
+  "title": "KINGGODFREYTV",
+  "tagline": "Original Video. Unfiltered Vision.",
+  "cta_text": "WATCH NOW",
+  "cta_url": "#watch",
+  "about_title": "THE CHANNEL",
+  "about_body": "KINGGODFREYTV is the visual broadcast arm of the IIIGLOBE empire. Original programming, documentary-style content, and creative direction that refuses to follow the algorithm — it sets the agenda.\n\nFrom brand-building series to culture commentary and cinematic short-form, KGTV is where the vision lives on screen.",
+  "section2_title": "PROGRAMMING",
+  "items": [
+    {"name": "The Blueprint", "description": "A docu-series on building brands, IP ownership, and scaling creative ecosystems from the ground up."},
+    {"name": "Visuals Department", "description": "Music videos, creative direction reels, and visual production showcasing the IIIGLOBE aesthetic."},
+    {"name": "King Godfrey Live", "description": "Uncut, unscripted, live-streamed conversations and events from the mind behind the movement."}
+  ],
+  "particle_count": 280
+}
