@@ -1,0 +1,15 @@
+{
+  "title": "G.E.E.K. Radio 305",
+  "tagline": "GIFTED EDUCATED EMPOWERED KINGS & QUEENS",
+  "cta_text": "TUNE IN",
+  "cta_url": "#listen",
+  "about_title": "ABOUT THE STATION",
+  "about_body": "G.E.E.K. Radio 305 is the flagship audio broadcast of the IIIGLOBE network — a curated soundscape for the gifted, the educated, the empowered. Broadcasting culture, conversation, and coded frequency out of Miami, FL.\n\nExpect deep dives into tech, innovation, Hip-Hop culture, entrepreneurship, and the stories that mainstream radio won't tell. Every episode is a transmission built to elevate.",
+  "section2_title": "FEATURED SHOWS",
+  "items": [
+    {"name": "The Frequency", "description": "Weekly deep-dive into culture, technology, and the intersection of creativity and code."},
+    {"name": "King's Table", "description": "Roundtable conversations with innovators, entrepreneurs, and builders shaping the future."},
+    {"name": "305 Sessions", "description": "Live sets, interviews, and exclusive content direct from Miami's creative underground."}
+  ],
+  "particle_count": 280
+}
