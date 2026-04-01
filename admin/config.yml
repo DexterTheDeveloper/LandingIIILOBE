@@ -4,96 +4,115 @@ backend:
   branch: main
   base_url: https://oauth.godfreyconnection.workers.dev
 
-media_folder: assets/uploads
-public_folder: /assets/uploads
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
-  - name: homepage
-    label: "🏠 Homepage"
+
+  # âââ ð  HOMEPAGE âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+  - name: "homepage"
+    label: "ð  Homepage"
     files:
-      - name: homepage
-        label: Homepage
-        file: _data/homepage.json
+      - name: "homepage"
+        label: "Homepage"
+        file: "_data/homepage.json"
         fields:
-          - {label: "Tagline", name: tagline, widget: string}
+          - { label: "Hero Tagline", name: "tagline", widget: "string" }
+
+          - label: "â³ Countdown"
+            name: "countdown_target"
+            widget: "datetime"
+            hint: "When the countdown hits zero the video embed will appear"
+
+          - { label: "Countdown Label", name: "countdown_label", widget: "string", default: "LAUNCHING IN", hint: "Text shown above the timer, e.g. LAUNCHING IN" }
+
+          - { label: "Video URL (embed src)", name: "countdown_video_url", widget: "string", required: false, hint: "YouTube/Vimeo embed src â leave blank for placeholder until ready" }
+
           - label: "Social Links"
-            name: social
-            widget: object
+            name: "social"
+            widget: "object"
             fields:
-              - {label: "Facebook URL", name: facebook, widget: string}
-              - {label: "Instagram URL", name: instagram, widget: string}
-              - {label: "Twitter / X URL", name: twitter, widget: string}
-              - {label: "YouTube URL", name: youtube, widget: string}
+              - { label: "Facebook URL",    name: "facebook",  widget: "string" }
+              - { label: "Instagram URL",   name: "instagram", widget: "string" }
+              - { label: "Twitter / X URL", name: "twitter",   widget: "string" }
+              - { label: "YouTube URL",     name: "youtube",   widget: "string" }
+
           - label: "Brand Cards"
-            name: brands
-            widget: list
+            name: "brands"
+            widget: "list"
             fields:
-              - {label: "Label", name: label, widget: string}
-              - {label: "URL", name: url, widget: string}
-          - {label: "Particle Count", name: particle_count, widget: number, default: 180}
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL",   name: "url",   widget: "string" }
+              - { label: "Logo",  name: "logo",  widget: "image", required: false, hint: "Brand logo shown on the homepage pillar" }
 
-  - name: geek-radio
-    label: "📻 G.E.E.K. Radio 305"
+  # âââ ð» G.E.E.K. RADIO 305 ââââââââââââââââââââââââââââââââââââââââââââââââââ
+  - name: "geek-radio"
+    label: "ð» G.E.E.K. Radio 305"
     files:
-      - name: geek-radio
-        label: G.E.E.K. Radio 305
-        file: _data/geek-radio.json
+      - name: "geek-radio"
+        label: "G.E.E.K. Radio 305"
+        file: "_data/geek-radio.json"
         fields:
-          - {label: "Page Title", name: title, widget: string}
-          - {label: "Tagline", name: tagline, widget: string}
-          - {label: "CTA Button Text", name: cta_text, widget: string}
-          - {label: "CTA Button URL", name: cta_url, widget: string}
-          - {label: "About Section Title", name: about_title, widget: string}
-          - {label: "About Body", name: about_body, widget: text}
-          - {label: "Section 2 Title", name: section2_title, widget: string}
-          - label: "Featured Items"
-            name: items
-            widget: list
+          - { label: "Page Title",          name: "title",          widget: "string" }
+          - { label: "Tagline",             name: "tagline",        widget: "string" }
+          - { label: "CTA Button Text",     name: "cta_text",       widget: "string" }
+          - { label: "CTA Button URL",      name: "cta_url",        widget: "string" }
+          - { label: "About Section Title", name: "about_title",    widget: "string" }
+          - { label: "About Body",          name: "about_body",     widget: "text",   hint: "Separate paragraphs with a blank line" }
+          - { label: "Section 2 Title",     name: "section2_title", widget: "string" }
+          - label: "Featured Shows"
+            name: "items"
+            widget: "list"
             fields:
-              - {label: "Name", name: name, widget: string}
-              - {label: "Description", name: description, widget: text}
-          - {label: "Particle Count", name: particle_count, widget: number, default: 280}
+              - { label: "Name",        name: "name",        widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image",       name: "image",       widget: "image", required: false }
+          - { label: "Particle Count", name: "particle_count", widget: "number", default: 280, hint: "Background particle density" }
 
-  - name: kgtv
-    label: "📺 KGTV"
+  # âââ ðº KGTV âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+  - name: "kgtv"
+    label: "ðº KGTV"
     files:
-      - name: kgtv
-        label: KGTV
-        file: _data/kgtv.json
+      - name: "kgtv"
+        label: "KGTV"
+        file: "_data/kgtv.json"
         fields:
-          - {label: "Page Title", name: title, widget: string}
-          - {label: "Tagline", name: tagline, widget: string}
-          - {label: "CTA Button Text", name: cta_text, widget: string}
-          - {label: "CTA Button URL", name: cta_url, widget: string}
-          - {label: "About Section Title", name: about_title, widget: string}
-          - {label: "About Body", name: about_body, widget: text}
-          - {label: "Section 2 Title", name: section2_title, widget: string}
-          - label: "Featured Items"
-            name: items
-            widget: list
+          - { label: "Page Title",          name: "title",          widget: "string" }
+          - { label: "Tagline",             name: "tagline",        widget: "string" }
+          - { label: "CTA Button Text",     name: "cta_text",       widget: "string" }
+          - { label: "CTA Button URL",      name: "cta_url",        widget: "string" }
+          - { label: "About Section Title", name: "about_title",    widget: "string" }
+          - { label: "About Body",          name: "about_body",     widget: "text",   hint: "Separate paragraphs with a blank line" }
+          - { label: "Section 2 Title",     name: "section2_title", widget: "string" }
+          - label: "Featured Shows"
+            name: "items"
+            widget: "list"
             fields:
-              - {label: "Name", name: name, widget: string}
-              - {label: "Description", name: description, widget: text}
-          - {label: "Particle Count", name: particle_count, widget: number, default: 280}
+              - { label: "Name",        name: "name",        widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image",       name: "image",       widget: "image", required: false }
+          - { label: "Particle Count", name: "particle_count", widget: "number", default: 280, hint: "Background particle density" }
 
-  - name: fresh-as-funk
-    label: "🎵 Fresh As Funk"
+  # âââ ðµ FRESH AS FUNK ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+  - name: "fresh-as-funk"
+    label: "ðµ Fresh As Funk"
     files:
-      - name: fresh-as-funk
-        label: Fresh As Funk
-        file: _data/fresh-as-funk.json
+      - name: "fresh-as-funk"
+        label: "Fresh As Funk"
+        file: "_data/fresh-as-funk.json"
         fields:
-          - {label: "Page Title", name: title, widget: string}
-          - {label: "Tagline", name: tagline, widget: string}
-          - {label: "CTA Button Text", name: cta_text, widget: string}
-          - {label: "CTA Button URL", name: cta_url, widget: string}
-          - {label: "About Section Title", name: about_title, widget: string}
-          - {label: "About Body", name: about_body, widget: text}
-          - {label: "Section 2 Title", name: section2_title, widget: string}
+          - { label: "Page Title",          name: "title",          widget: "string" }
+          - { label: "Tagline",             name: "tagline",        widget: "string" }
+          - { label: "CTA Button Text",     name: "cta_text",       widget: "string" }
+          - { label: "CTA Button URL",      name: "cta_url",        widget: "string" }
+          - { label: "About Section Title", name: "about_title",    widget: "string" }
+          - { label: "About Body",          name: "about_body",     widget: "text",   hint: "Separate paragraphs with a blank line" }
+          - { label: "Section 2 Title",     name: "section2_title", widget: "string" }
           - label: "Featured Items"
-            name: items
-            widget: list
+            name: "items"
+            widget: "list"
             fields:
-              - {label: "Name", name: name, widget: string}
-              - {label: "Description", name: description, widget: text}
-          - {label: "Particle Count", name: particle_count, widget: number, default: 280}
+              - { label: "Name",        name: "name",        widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image",       name: "image",       widget: "image", required: false }
+          - { label: "Particle Count", name: "particle_count", widget: "number", default: 280, hint: "Background particle density" }
