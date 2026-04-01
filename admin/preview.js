@@ -122,3 +122,4 @@ function makePillarPreview(accentClass, sectionId) {
 CMS.registerPreviewTemplate('geek-radio',    makePillarPreview('geek-accent', 'listen'));
 CMS.registerPreviewTemplate('kgtv',          makePillarPreview('kgtv-accent', 'watch'));
 CMS.registerPreviewTemplate('fresh-as-funk', makePillarPreview('funk-accent', 'explore'));
+}
