@@ -186,6 +186,7 @@
             .social a svg { width: 15px; height: 15px; }
         }
     </style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 
@@ -301,5 +302,19 @@
 })();
 </script>
 
+
+<script>
+(function() {
+  fetch('_data/homepage.json')
+    .then(r => r.json())
+    .then(d => {
+      // Social links
+      const socials = document.querySelectorAll('.social a');
+      const map = { 'Facebook': d.social.facebook, 'Instagram': d.social.instagram, 'X (Twitter)': d.social.twitter, 'YouTube': d.social.youtube };
+      socials.forEach(a => { const u = map[a.title]; if (u) a.href = u; });
+    })
+    .catch(() => {}); // graceful fallback — hardcoded values remain
+})();
+</script>
 </body>
 </html>

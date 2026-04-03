@@ -64,6 +64,7 @@
     .section h2 { color:#fdde00; }
     .pillar-logo { filter:drop-shadow(0 0 24px rgba(253,222,0,0.7)); }
 </style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 <canvas id="bg"></canvas>
@@ -133,6 +134,53 @@
         requestAnimationFrame(draw);
     }
     draw();
+</script>
+
+<script>
+(function() {
+  fetch('_data/kgtv.json')
+    .then(r => r.json())
+    .then(d => {
+      // Hero
+      const h1 = document.querySelector('.pillar-hero h1');
+      if (h1) h1.textContent = d.title;
+      const tag = document.querySelector('.pillar-hero .tagline');
+      if (tag) tag.textContent = d.tagline;
+      const cta = document.querySelector('.pillar-hero .cta-btn');
+      if (cta) { cta.textContent = d.cta_text; cta.href = d.cta_url; }
+
+      // Sections
+      const sections = document.querySelectorAll('.section');
+      if (sections[0]) {
+        const h2 = sections[0].querySelector('h2');
+        if (h2) h2.textContent = d.about_title;
+        const p = sections[0].querySelector('p');
+        if (p) {
+          const paras = d.about_body.split(/\n\n+/);
+          p.textContent = paras[0];
+          paras.slice(1).forEach(txt => {
+            const np = document.createElement('p');
+            np.textContent = txt;
+            sections[0].appendChild(np);
+          });
+        }
+      }
+      if (sections[1]) {
+        const h2 = sections[1].querySelector('h2');
+        if (h2) h2.textContent = d.section2_title;
+        const cards = sections[1].querySelectorAll('.card');
+        d.items.forEach((item, i) => {
+          if (cards[i]) {
+            const h3 = cards[i].querySelector('h3');
+            if (h3) h3.textContent = item.name;
+            const p = cards[i].querySelector('p');
+            if (p) p.textContent = item.description;
+          }
+        });
+      }
+    })
+    .catch(() => {});
+})();
 </script>
 </body>
 </html>
